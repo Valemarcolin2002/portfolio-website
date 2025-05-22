@@ -1,0 +1,1059 @@
+/* PER AGGIUNTA NUOVI PROGETTI-> andare nella classe portfolio-table (circa riga 222)*/
+
+/* VARIABILI */
+:root{
+    --colorCaco:#D89584;
+    --colorGray:#F4F4F4;
+}
+
+/* TUTTO */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Trebuchet MS';
+    line-height: 1.25;
+}
+iframe{
+    width: 100%;
+    border:none;
+    height: 300px;
+
+}
+
+/* HEADER */
+.header-cover{
+    background: url(images/cover_overlay.png) no-repeat center/100% 100%, url(images/cover.jpg) no-repeat center/cover;
+    height: 380px;
+    position: relative;
+}
+.position-header-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.header-profile{
+    height:100px;
+    width: 100px;
+    border: solid white 3px;
+    border-radius: 50%;
+}
+.header-name{
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.header-description{
+    color:lightgray;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 8px;
+}
+.header-contacts{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-left: 4px solid var(--colorCaco);
+    padding-left: 8px;
+    margin-bottom:20px;
+}
+.header-link{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color:lightgray;
+    font-size: 14px;
+    text-decoration:none;
+}
+.header-link:hover{
+    text-decoration:underline;
+}
+.position-header-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-button{
+    background-color: rgba(0,0,0,0.4);
+    border: solid 3px var(--colorCaco);
+    color:var(--colorCaco);
+    padding: 10px 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration:none;
+    font-size: 14px;
+}
+.header-button:hover{
+    background-color: rgba(50, 50, 50, 0.4);
+    border: solid 3px lightgray;
+    color:lightgray;
+}
+
+/* SECTION */
+.section{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    text-align: center;
+    font-size:34px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h3{
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+h4{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 15px;
+}
+
+/* GREY SECTION */
+.grey-section{
+    background: url(images/triangle2white.svg) no-repeat center bottom -1px/100%;
+    background-color: var(--colorGray);
+    padding-bottom: 100px;
+    align-items: center;
+} 
+.separator{
+    background-color:#979797;
+    height: 1px;
+    width: 150px;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.testo-grey-section{
+    flex-direction: row; 
+    text-align: center;
+    font-size:18px;
+    width: 85%;
+}
+.descrizione-grey-section{
+    font-size: 18px;
+}
+
+/* ABOUT ME */
+.contenuto-about-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+
+}
+.centramento-img-about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-about-me{
+    width:50%;
+    margin: 20px;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.2);
+}
+.testo-about-me{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vertical-line-about-me{
+    height:50px;
+    border-left: solid 4px var(--colorCaco);
+    margin-right: 10px; 
+    margin-top: 31px;
+    margin-bottom: 35px;
+}
+.competenze{
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+    padding:20px;
+}
+.competenze-testo{
+    font-size: 13px;
+}
+.curriculum{
+    margin-left: 30px;
+    color:rgb(20, 7, 105);
+    text-decoration:none;
+    font-weight: bolder;
+    display: flex;
+    font-size: 15px;
+}
+.curriculum:hover{
+    text-decoration:underline;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    background: url(images/triangle1white.svg) no-repeat center top/100%;
+    background-color: var(--colorGray);
+    padding-top: 100px;
+}
+.progetti-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem; 
+    padding: 1rem;
+    margin-top: 20px;
+}
+.portfolio-table{
+    width:100%;
+    /*  per quando avro più progetti cambia la propietà flex in questo modo: flex: 0 1 clamp(200px, 80%, 350px); */
+    flex: 1 1 200px;
+    justify-content: center;
+    max-width: fit-content;
+    /* min-width: 200px;
+    max-width: 400px; */
+    margin-top: 0;
+    padding: 10px;
+}
+.vertical-bar{
+    height:50px;
+    width:4px;
+    background-color: var(--colorCaco);
+    margin-right: 8px;
+}
+.img-portfolio{
+    width: 100%;
+    box-shadow: 0px 0px 8px 8px transparent;
+    max-width: 400px;
+    min-width: 250px;
+}
+.img-portfolio:hover{
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.35);
+}
+.portfolio-link{
+    color:rgb(20, 7, 105);
+    text-decoration:none;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.portfolio-link:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+.frame{
+    margin:30px 50px;
+    padding:20px 30px;
+    background-color: white;
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.frame-title{
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.frame-table{
+    padding: 20px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+
+}
+.vertical-line-frame{
+    height:50px;
+    border-left: solid 4px var(--colorCaco);
+    margin-right: 8px; 
+    margin-top: 5px;
+}
+.frame-tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.frame-contenuto{
+    padding: 10px 20px;
+    display: flex;
+}
+.frame-testo{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+
+/* PORTFOLIO PAGES */
+
+/* HEDER */
+.portfolio-header{
+    padding: 1px;
+    background: url(images/header.jpg) no-repeat center/cover;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.portfolio-header-orange-line{
+    margin-left: 10px;
+}
+.portfolio-header-name{
+    color:white;
+    font-size: 26px;
+    border-left: 4px solid var(--colorCaco);
+    padding: 5px;
+}
+.portfolio-header-button{
+    background-color: rgba(0,0,0,0.4);
+    border: solid 3px var(--colorCaco);
+    color:var(--colorCaco);
+    padding: 10px 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration:none;
+    font-size: 14px;
+}
+
+/* GREY SECTION TITLES */
+.grey-section-portfolio{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: url(images/triangle2white.svg) no-repeat center bottom/100%;
+    background-color: var(--colorGray);
+    padding-bottom: 100px;
+}
+.back{
+    color: var(--colorCaco);
+    font-weight: bold;
+    text-decoration:none;
+    font-size: 17px;
+    margin-left: -10px;
+}
+.back:hover{
+    text-decoration:underline;
+}
+.grey-section-portfolio-contenuto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gray-section-title{
+    font-size: 37px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    line-height: 1;
+}
+.gray-section-description{
+    font-size: 25px;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+/* CONTENT SECTION */
+.section-portfolio{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content-section{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.vertical-line-portfolio-W{
+    height:157px;
+    border-left: solid 4px var(--colorCaco);
+    margin-right: 10px; 
+    margin-top: 2px;
+}
+.vertical-line-portfolio-L{
+    height:118px;
+    border-left: solid 4px var(--colorCaco);
+    margin-right: 10px; 
+    margin-top: 2px;
+}
+.content-image-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mt-cic{
+    margin-top: 40px;
+}
+.content-image{
+    width: 70%;
+    max-width: 800px;
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.2);
+}
+.content-image:hover{
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.37);
+}
+
+
+/*  MEDIA */
+@media(max-width:1213px){
+    .vertical-line-portfolio-L{
+        height:137px;
+    }
+}
+@media(max-width:1012px){
+    .vertical-line-about-me{
+        height:46px;
+        margin-bottom: 57px;
+    }
+}
+@media(max-width:940px){
+    .vertical-line-portfolio-L{
+        height:156px;
+    }
+}
+@media(max-width:876px){
+    .vertical-line-frame{
+        height:40px;
+        margin-top: 0px;
+    }
+}
+@media(max-width:915px){
+    .vertical-line-about-me{
+        height:41px;
+        margin-bottom: 80px;
+    }
+}
+@media(max-width:856px){
+    .vertical-line-about-me{
+        height:46px;
+        margin-bottom: 68px;
+        margin-top:51px;
+    }
+}
+@media(max-width:789px){
+    .vertical-line-portfolio-W{
+        height:178px;
+    }
+}
+@media(max-width:787px){
+    .vertical-line-portfolio-L{
+        margin-left:-10px;
+    }
+}
+@media(max-width:776px){
+    .vertical-line-portfolio-L{
+        height:176px;
+    }
+}
+@media(max-width:774px){
+    .vertical-line-portfolio-W{
+        height:198px;
+    }
+}
+@media(max-width:770px){
+    .contenuto-about-me{
+        flex-direction: column;
+        
+    }
+    .competenze{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .testo-about-me{
+        width: 100%;
+    }
+    .image-about-me{
+        width: 100%;
+        margin-right: 20px;
+        margin-top: 20px;
+        max-width: 300px;
+        min-width: 10px;  
+    }
+    .vertical-line-about-me{
+        height:50px;
+        margin-top: 31px;
+        margin-bottom: 35px;
+    }
+}
+@media(max-width:755px){
+    .vertical-line-portfolio-W{
+        height:218px;
+    }
+}
+@media(max-width:708px){
+    iframe{
+        height: 350px;
+    }
+}
+@media(max-width:661px){
+    .section-portfolio{
+        padding:20px;
+    }
+    .vertical-line-portfolio-L{
+        margin-left: 0px;
+    }
+}
+@media(max-width:628px){
+    .vertical-line-frame{
+        height:56px;
+        margin-top: 2px;
+    }
+    .vertical-line-portfolio-L{
+        height: 197px;
+        margin-right: 9px; 
+    }
+}
+@media(max-width:621px){
+    .vertical-line-portfolio-W{
+        height:238px;
+    }
+    iframe{
+        height: 400px;
+    }
+} 
+@media(max-width:619px){
+    .vertical-line-portfolio-L{
+        height:216px;
+    }
+}
+@media(max-width:584px){
+    iframe{
+        height: 450px;
+    }
+}
+@media(max-width:563px){
+    .vertical-line-portfolio-L{
+        height:236px;
+    }
+}
+@media(max-width:546px){
+    .vertical-line-about-me{
+        height:40px;
+        margin-bottom: 66px;
+        margin-top:31px;
+    }
+}
+@media(max-width:544px){
+    .vertical-line-portfolio-L{
+        height:256px;
+    }
+}
+@media(max-width:540px){
+    .vertical-line-frame{
+        height:76px;
+        margin-top: 2px;
+    }
+}
+@media(max-width:519px){
+    .vertical-line-portfolio-W{
+        height:258px;
+    }
+}
+@media(max-width:517px){
+    .frame-table{
+        padding:10px 0px;
+    }
+    .vertical-line-frame{
+        height:56px;
+        margin-top: 2px;
+    }
+}
+/* cambio direzione footer*/
+@media(max-width:504px){
+    .vertical-line-frame{
+        height:55px;
+        margin-top: 2px;
+    }
+    .frame-tr{
+        flex-direction: column;
+    }
+    .frame-contenuto{
+        margin-top: 20px;
+    }
+    .vertical-line-frame{
+        height:40px;
+        margin-top: 1px;
+    }
+    .gray-section-title{
+        font-size: 30px;
+    }
+    .gray-section-description{
+        font-size: 20px;
+    }
+
+    .mt-cic{
+        margin-top: 20px;
+    }
+    .content-image{
+        width: 80%;
+    }
+    .vertical-line-portfolio-L{
+        height:275px; 
+    }
+}
+@media(max-width:502px){
+    .section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .img-portfolio{
+        min-width: 50px;
+    }
+    .vertical-line-portfolio-W{
+        height:278px;
+    }
+}
+@media(max-width:486px){
+    .frame-contenuto{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media(max-width:447px){
+    .descrizione-grey-section{
+        font-size: 15px;
+    }
+    .vertical-line-about-me{
+        height:50px;
+        margin-top:32px;
+    }
+    .frame{
+        margin: 10px 20px;
+    }
+    .portfolio-header-name{
+        font-size: 20px;
+    }
+}
+@media(max-width:426px){
+    .vertical-line-portfolio-L{
+        border-left: solid 3.5px var(--colorCaco);
+        margin-right: 7px;
+        margin-left: -5px; 
+    }
+}
+@media(max-width:419px){
+    .vertical-line-portfolio-L{
+        height:297px;
+    }
+}
+@media(max-width:415px){
+    .vertical-line-portfolio-W{
+        height:298px;
+    }
+}
+@media(max-width:403px){
+    .section{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .header-name{
+        font-size: 35px;
+    }
+    .header-description{
+        font-size: 13px;
+    }
+    .header-link{
+        font-size: 12px;
+    }
+    .competenze{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .vertical-line-about-me{
+        height:49px;
+        margin-bottom:64px;
+        margin-top:48px;
+    }
+    .gray-section-title{
+        font-size: 28px;
+    }
+    .gray-section-description{
+        font-size: 18px;
+    }
+    .back{
+        font-size: 15px;
+        margin-left: -5px;
+    }
+    .separator{
+        width: 130px;
+
+        margin-bottom: 16px;
+    }
+    .grey-section-portfolio{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+    }
+    .testo-content-section-portfolio{
+        font-size:13px;
+    }
+    .vertical-line-portfolio-W{
+        height:224px;
+    }
+    .mt-cic{
+        margin-top: 10px;
+    }
+    .content-image{
+        width: 90%;
+    }
+    .vertical-line-portfolio-L{
+        height:224px;
+        border-left: solid 2.7px var(--colorCaco);
+        margin-right: 7px;
+        margin-left: 0px; 
+    }
+}
+@media(max-width:385px){
+    .vertical-line-frame{
+        height:56px;
+        margin-top: 2px;
+    }
+}
+@media(max-width:374px){
+    .vertical-line-about-me{
+        margin-bottom: 68px;
+    }
+    .portfolio-header-name{
+        font-size: 18px;
+    }
+}
+@media(max-width:358px){
+    
+    .frame-table{
+        padding:10px 0px 0px 0px;
+    }
+    .competenze{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .frame-title{
+        font-size: 20px;
+    }
+    .frame-testo{
+        font-size:13px;
+    }
+    .portfolio-link{
+        font-size:13px;
+    }
+    .vertical-line-frame{
+        height:35px;
+        margin-top: 0px;
+    }
+    .portfolio-header-name{
+        font-size: 16px;
+    }
+    .portfolio-header-button{
+        padding: 10px 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 12px;
+    }
+}
+@media(max-width:353px){
+    .vertical-line-portfolio-L{
+        height:240px;
+    }
+}
+@media(max-width:347px){
+    .section-portfolio{
+        padding:10px;
+    }
+    .vertical-line-portfolio-W{
+        height:224px;
+    }
+
+    .vertical-line-portfolio-L{
+        height:224px;
+        border-left: solid 2.5px var(--colorCaco);
+        margin-right: 5px;
+    }
+}
+@media(max-width:335px){
+    .vertical-line-frame{
+        height:46px;
+        margin-top: 1px;
+    }
+    .portfolio-header-name{
+        font-size: 15px;
+    }
+    .portfolio-header-button{
+        padding: 8px 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 10px;
+    }
+    .gray-section-title{
+        font-size: 24px;
+    }
+    .gray-section-description{
+        font-size: 15px;
+    }
+    .back{
+        font-size: 14px;
+        margin-left: 0px;
+    }
+    .separator{
+        width: 120px;
+        margin-bottom: 16px;
+    }
+    .grey-section-portfolio{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 60px;
+    }
+}
+@media(max-width:331px){
+    .vertical-line-portfolio-L{
+        height:239px;
+    }
+}
+@media(max-width:327px){
+    .vertical-line-portfolio-W{
+        height:240px;
+    }
+}
+@media(max-width:315px){
+    .vertical-line-portfolio-W{
+        height:207px;
+        margin-right: 7px;
+        border-left: solid 3px var(--colorCaco);
+    }
+    .testo-content-section-portfolio{
+        font-size: 12px;
+    }
+    .vertical-line-portfolio-L{
+        height:207px;
+    }
+}
+@media(max-width:308px){
+    .vertical-line-portfolio-L{
+        height:221px;
+    }
+}
+@media(max-width:301px){
+    .vertical-line-portfolio-W{
+        height:222px;
+    }
+    .mt-cic{
+        margin-top: 0px;
+    }
+}
+@media(max-width:300px){
+    h2{
+        font-size: 25px;
+    }
+    .header-link{
+        font-size: 10px;
+    }
+    .competenze-testo{
+        font-size: 12px;
+    }
+    .vertical-line-about-me{
+        height:45px;
+        margin-bottom: 68px;
+        margin-top:45px;
+    }
+    .back{
+        font-size: 12px;
+    }
+    .grey-section-portfolio{
+        padding-top:10px;
+    }
+}
+@media(max-width:291px){
+    .vertical-line-portfolio-L{
+        height:236px;
+    }
+}
+@media(max-width:289px){
+    .vertical-line-portfolio-W{
+        height:237px;
+    }
+}
+@media(max-width:281px){
+    .vertical-line-portfolio-W{
+        height:252px;
+    }
+}
+@media(max-width:274px){
+    .vertical-line-portfolio-L{
+        height:250px;
+    }
+}
+@media(max-width:272px){
+    
+    .vertical-line-about-me{
+        margin-bottom: 80px;
+    }
+    .portfolio-header-name{
+        font-size: 13px;
+    }
+    .portfolio-header-button{
+        padding: 8px 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 9px;
+    }
+}
+@media(max-width:270px){
+    .vertical-line-frame{
+        height:62px;
+        margin-top: 1px;
+    }
+    .gray-section-title{
+        font-size: 22px;
+    }
+    .gray-section-description{
+        font-size: 13px;
+    }
+    .back{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .separator{
+        width: 110px;
+        margin-bottom: 14px;
+    }
+    .grey-section-portfolio{
+        padding-top:10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 50px;
+    }
+}
+@media(max-width:263px){
+    .vertical-line-portfolio-L{
+        height:266px;
+    }
+}
+@media(max-width:257px){
+    .vertical-line-portfolio-L{
+        height:280px;
+    }
+}
+@media(max-width:250px){
+
+    .header-link{
+        font-size: 8px;
+    }
+    .competenze-testo{
+        font-size: 11px;
+    }
+    .vertical-line-about-me{
+        margin-bottom: 68px;
+    }
+    iframe{
+        height: 600px;
+    }
+    .portfolio-header-name{
+        font-size: 12px;
+    }
+    .portfolio-header-button{
+        padding: 7px 15px;
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 8px;
+    }
+}
+@media(max-width:246px){
+    .vertical-line-portfolio-W{
+        height:230px;
+        margin-right: 6px;
+        border-left: solid 2.7px var(--colorCaco);
+    }
+    .testo-content-section-portfolio{
+        font-size: 11px;
+    }
+    .section-portfolio{
+        padding: 8px;
+    }
+    .content-image{
+        width: 95%;
+    }
+    .portfolio-link{
+        font-size: 11px;
+    }
+
+    .vertical-line-portfolio-L{
+        height:231px;
+    }
+}
+@media(max-width:239px){
+    .vertical-line-portfolio-L{
+        height:245px;
+    }
+}
+@media(max-width:234px){
+    .vertical-line-frame{
+        height:79px;
+        margin-top: 1px;
+    }
+    .portfolio-header-name{
+        font-size: 11px;
+    }
+    .portfolio-header-button{
+        padding: 6px 14px;
+        margin-left: 7px;
+        margin-right: 7px;
+        font-size: 7px;
+    }
+    .gray-section-title{
+        font-size: 20px;
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+    .gray-section-description{
+        font-size: 13px;
+    }
+    .back{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+    .separator{
+        width: 90px;
+        margin-bottom: 14px;
+    }
+    .grey-section-portfolio{
+        padding-top:5px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom:40px;
+    }
+    .vertical-line-portfolio-L{
+        height:259px;
+    }
+}
+@media(max-width:222px){
+    .vertical-line-portfolio-W{
+        height:243px;
+    }
+}
+
+
+
+
+/* DIFFERENZA DI 80PX */
+
+/* da schermo 425px -> dif. 60px in meno */
