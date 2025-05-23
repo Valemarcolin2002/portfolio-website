@@ -15,10 +15,7 @@ body{
     padding:0;
     font-family: 'Trebuchet MS';
     line-height: 1.25;
-}
-iframe{
-    width: 100%;
-    border:none;
+/* none; */
     height: 300px;
 
 }
@@ -428,15 +425,14 @@ h4{
         margin-bottom: 57px;
     }
 }
+@media(max-width:956px){
+    .vertical-line-frame{
+        height:37px;
+        margin-top: 2px;    }
+}
 @media(max-width:940px){
     .vertical-line-portfolio-L{
         height:156px;
-    }
-}
-@media(max-width:876px){
-    .vertical-line-frame{
-        height:40px;
-        margin-top: 0px;
     }
 }
 @media(max-width:915px){
@@ -503,8 +499,9 @@ h4{
     }
 }
 @media(max-width:708px){
-    iframe{
-        height: 350px;
+    .vertical-line-frame{
+        height:56px;
+        margin-top: 2px;
     }
 }
 @media(max-width:661px){
@@ -514,12 +511,11 @@ h4{
     .vertical-line-portfolio-L{
         margin-left: 0px;
     }
+    .frame{
+        margin:30px 30px;
+    }
 }
 @media(max-width:628px){
-    .vertical-line-frame{
-        height:56px;
-        margin-top: 2px;
-    }
     .vertical-line-portfolio-L{
         height: 197px;
         margin-right: 9px; 
@@ -529,23 +525,26 @@ h4{
     .vertical-line-portfolio-W{
         height:238px;
     }
-    iframe{
-        height: 400px;
-    }
 } 
 @media(max-width:619px){
     .vertical-line-portfolio-L{
         height:216px;
     }
 }
-@media(max-width:584px){
-    iframe{
-        height: 450px;
+@media(max-width:580px){
+    .frame{
+        margin:20px;
     }
 }
 @media(max-width:563px){
     .vertical-line-portfolio-L{
         height:236px;
+    }
+}
+@media(max-width:559.5px){
+    .vertical-line-frame{
+        height:76px;
+        margin-top: 2px;
     }
 }
 @media(max-width:546px){
@@ -560,30 +559,10 @@ h4{
         height:256px;
     }
 }
-@media(max-width:540px){
-    .vertical-line-frame{
-        height:76px;
-        margin-top: 2px;
-    }
-}
-@media(max-width:519px){
-    .vertical-line-portfolio-W{
-        height:258px;
-    }
-}
-@media(max-width:517px){
-    .frame-table{
-        padding:10px 0px;
-    }
-    .vertical-line-frame{
-        height:56px;
-        margin-top: 2px;
-    }
-}
 /* cambio direzione footer*/
-@media(max-width:504px){
+@media(max-width:524px){
     .vertical-line-frame{
-        height:55px;
+        height:40px;
         margin-top: 2px;
     }
     .frame-tr{
@@ -592,10 +571,25 @@ h4{
     .frame-contenuto{
         margin-top: 20px;
     }
-    .vertical-line-frame{
-        height:40px;
-        margin-top: 1px;
+    .frame-table{
+        padding:0px;
     }
+    .frame-tr{
+        margin-top: 20px;
+    }
+}
+@media(max-width:519px){
+    .vertical-line-portfolio-W{
+        height:258px;
+    }
+}
+@media(max-width:506px){
+    .section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media(max-width:504px){
     .gray-section-title{
         font-size: 30px;
     }
@@ -614,10 +608,6 @@ h4{
     }
 }
 @media(max-width:502px){
-    .section{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
     .img-portfolio{
         min-width: 50px;
     }
@@ -651,6 +641,10 @@ h4{
         border-left: solid 3.5px var(--colorCaco);
         margin-right: 7px;
         margin-left: -5px; 
+    }
+    .vertical-line-frame{
+        height:56px;
+        margin-top: 2px;
     }
 }
 @media(max-width:419px){
@@ -724,11 +718,30 @@ h4{
         margin-right: 7px;
         margin-left: 0px; 
     }
-}
-@media(max-width:385px){
     .vertical-line-frame{
-        height:56px;
+        height:37px;
         margin-top: 2px;
+    }
+}
+@media(max-width:386px){
+    .frame-table{
+        padding:10px 0px 0px 0px;
+    }
+    .vertical-line-frame{
+        height:30px;
+        margin-top: 1px;
+    }
+    .frame-title{
+        font-size: 20px;
+    }
+    .frame-testo{
+        font-size:13px;
+    }
+    .portfolio-link{
+        font-size:13px;
+    }
+    .frame-tr{
+        margin-top: 5px;
     }
 }
 @media(max-width:374px){
@@ -740,27 +753,10 @@ h4{
     }
 }
 @media(max-width:358px){
-    
-    .frame-table{
-        padding:10px 0px 0px 0px;
-    }
     .competenze{
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .frame-title{
-        font-size: 20px;
-    }
-    .frame-testo{
-        font-size:13px;
-    }
-    .portfolio-link{
-        font-size:13px;
-    }
-    .vertical-line-frame{
-        height:35px;
-        margin-top: 0px;
-    }
+    } 
     .portfolio-header-name{
         font-size: 16px;
     }
@@ -792,7 +788,7 @@ h4{
 }
 @media(max-width:335px){
     .vertical-line-frame{
-        height:46px;
+        height:47px;
         margin-top: 1px;
     }
     .portfolio-header-name{
@@ -918,8 +914,12 @@ h4{
     }
 }
 @media(max-width:270px){
+    .frame{
+        padding: 10px 18px;
+        margin:0px 15px
+    }
     .vertical-line-frame{
-        height:62px;
+        height:46px;
         margin-top: 1px;
     }
     .gray-section-title{
@@ -964,9 +964,6 @@ h4{
     .vertical-line-about-me{
         margin-bottom: 68px;
     }
-    iframe{
-        height: 600px;
-    }
     .portfolio-header-name{
         font-size: 12px;
     }
@@ -995,7 +992,13 @@ h4{
     .portfolio-link{
         font-size: 11px;
     }
-
+    .frame-testo{
+        font-size:11px
+    }
+    .vertical-line-frame{
+        height:40px;
+        margin-top: 1px;
+    }
     .vertical-line-portfolio-L{
         height:231px;
     }
@@ -1006,10 +1009,7 @@ h4{
     }
 }
 @media(max-width:234px){
-    .vertical-line-frame{
-        height:79px;
-        margin-top: 1px;
-    }
+
     .portfolio-header-name{
         font-size: 11px;
     }
